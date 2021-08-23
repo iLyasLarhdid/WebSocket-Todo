@@ -13,7 +13,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 @Entity
 @AllArgsConstructor
@@ -22,8 +21,8 @@ import java.time.LocalDateTime;
 @Setter
 public class TodoEntity {
     @Id
-    @GenericGenerator(name = "system-uuid",strategy = "uuid")
-    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "todo-uuid",strategy = "uuid")
+    @GeneratedValue(generator = "todo-uuid")
     private String id;
     private String description;
     @CreationTimestamp
